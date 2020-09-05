@@ -41,6 +41,7 @@ group :development, :test do
 
   #サンプルデータ
   gem 'faker'
+  gem 'gimei'
 end
 
 group :development do

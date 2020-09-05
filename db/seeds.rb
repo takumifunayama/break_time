@@ -9,7 +9,7 @@
   # usersのダミーデータの生成
   id = n+1
   email = Faker::Internet.email
-  name = Faker::Games::Pokemon.name
+  name = Gimei.unique.name.kanji
   password = "pass"
 
   User.create!(
@@ -19,4 +19,13 @@
     password: password,
     password_confirmation: password
   )
+
+  content = Faker::Games::Pokemon.name
+  user_id = User.offset(rand(User.count)).first.id
+
+    Post.create!(
+      id: id,
+      content: content,
+      user_id: user_id
+    )
 end
