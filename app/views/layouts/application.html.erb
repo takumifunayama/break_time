@@ -6,10 +6,11 @@
     <title>Break time</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= javascript_include_tag "application" %>  
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 
-
+    <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
@@ -18,12 +19,24 @@
   </head>
 
   <body>
-    <%= render 'layouts/navbar' %>
-
+    <header>
+      <%= render 'layouts/navbar' %>
+    </header>
     <div class="container">
       <%= render 'layouts/flash_messages' %>
 
       <%= yield %>
+      <footer id='footer' class='footer-bottom'>
+        <div class='container'>
+          <div class='row'>
+            <div class='col-sm-6 col-12'>
+              <div class='copyright'>
+                <p>Copyright © 2019. RUNTEQ</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
