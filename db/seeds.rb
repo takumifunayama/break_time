@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+30.times do |n|
+  # usersのダミーデータの生成
+  id = n+1
+  email = Faker::Internet.email
+  name = Faker::Games::Pokemon.name
+  password = "pass"
+
+  User.create!(
+    id: id,
+    email: email,
+    name: name,
+    password: password,
+    password_confirmation: password
+  )
+end
