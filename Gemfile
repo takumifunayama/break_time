@@ -71,3 +71,7 @@ gem 'rails-i18n'
 # carriewaveの導入, mini_magickの追加
 gem 'carrierwave'
 gem 'mini_magick'
+
+gem 'sorcery'
+
+gem 'bootstrap'
