@@ -33,11 +33,15 @@ group :development, :test do
   gem 'capybara', '>= 2.15', '< 4.0'
   gem 'selenium-webdriver'
 
-  # ここから下が追加分
+  # pry適応
   gem 'pry-rails'
   gem 'pry-doc'
   gem 'pry-byebug'
   gem 'pry-stack_explorer'
+
+  #サンプルデータ
+  gem 'faker'
+  gem 'gimei'
 end
 
 group :development do
@@ -47,6 +51,9 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  gem 'rubocop'
+  gem 'rubocop-rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -55,3 +62,12 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'jquery-rails'
 
 gem 'kaminari'
+
+# rails_best_practicesの導入
+gem 'rails_best_practices'
+# rails_i18nの導入
+gem 'rails-i18n'
+
+# carriewaveの導入, mini_magickの追加
+gem 'carrierwave'
+gem 'mini_magick'
