@@ -75,3 +75,7 @@ gem 'mini_magick'
 gem 'sorcery'
 
 gem 'bootstrap'
+
+gem 'font-awesome-sass'
+
+gem 'line-bot-api'

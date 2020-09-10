@@ -9,6 +9,9 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @posts = @user.posts.order(id: :desc).page(params[:page])
     counts(@user)
+
+    favorites = Favorite.where(user_id: current_user.id).pluck(:post_id)  # ログイン中のユーザーのお気に入りのpost_idカラムを取得
+    @favorite_list = Post.find(favorites)     # postsテーブルから、お気に入り登録済みのレコードを取得
   end
 
   def new

@@ -13,8 +13,13 @@ Rails.application.routes.draw do
       get :followings
       get :followers
     end
+    get :favorites, on: :collection
   end
 
-  resources :posts, only: %i[create destroy]
+  resources :posts, only: %i[create destroy] do
+    resource :favorites, only: [:create, :destroy]
+  end
   resources :relationships, only: %i[create destroy]
+
+  post '/callback', to: 'linebot#callback'
 end

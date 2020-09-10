@@ -103,6 +103,8 @@ GEM
     faraday (1.0.1)
       multipart-post (>= 1.2, < 3)
     ffi (1.13.1)
+    font-awesome-sass (5.13.0)
+      sassc (>= 1.11)
     gimei (0.5.1)
       romaji
     globalid (0.4.2)
@@ -132,6 +134,7 @@ GEM
       activerecord
       kaminari-core (= 1.2.1)
     kaminari-core (1.2.1)
+    line-bot-api (1.16.0)
     listen (3.2.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -318,10 +321,12 @@ DEPENDENCIES
   capybara (>= 2.15, < 4.0)
   carrierwave
   faker
+  font-awesome-sass
   gimei
   jbuilder (~> 2.7)
   jquery-rails
   kaminari
+  line-bot-api
   listen (~> 3.2)
   mini_magick
   mysql2 (>= 0.4.4)
